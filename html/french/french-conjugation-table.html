@@ -1,0 +1,188 @@
+<dom-module id="french-conjugation-table">
+  <template>
+    <style>
+      :host {
+      }
+    </style>
+    <div class="french">
+      <div class="row">
+        <div class="col-md-3">
+          <div>
+            <h3>Present</h3>
+          </div>
+          <div>
+            <div>
+              <strong>je</strong>
+              <span>[[ conjugation.present.0]]</span>
+            </div>
+            <div>
+              <strong>tu</strong>
+              <span>[[conjugation.present.1]]</span>
+            </div>
+            <div>
+              <strong>elle / est</strong>
+              <span>[[conjugation.present.2]]</span>
+            </div>
+            <div>
+              <strong>nous</strong>
+              <span>[[conjugation.present.3]]</span>
+            </div>
+            <div>
+              <strong>vous</strong>
+              <span>[[conjugation.present.4]]</span>
+            </div>
+            <div>
+              <strong>elles / ils</strong>
+              <span>[[conjugation.present.5]]</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div>
+            <h3>Future</h3>
+          </div>
+          <div>
+            <div>
+              <strong>je</strong>
+              <span>[[ conjugation.future.0]]</span>
+            </div>
+            <div>
+              <strong>tu</strong>
+              <span>[[conjugation.future.1]]</span>
+            </div>
+            <div>
+              <strong>elle / est</strong>
+              <span>[[conjugation.future.2]]</span>
+            </div>
+            <div>
+              <strong>nous</strong>
+              <span>[[conjugation.future.3]]</span>
+            </div>
+            <div>
+              <strong>vous</strong>
+              <span>[[conjugation.future.4]]</span>
+            </div>
+            <div>
+              <strong>elles / ils</strong>
+              <span>[[conjugation.future.5]]</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div>
+            <h3>Imperfect</h3>
+          </div>
+          <div>
+            <div>
+              <strong>je</strong>
+              <span>[[ conjugation.imperfect.0]]</span>
+            </div>
+            <div>
+              <strong>tu</strong>
+              <span>[[conjugation.imperfect.1]]</span>
+            </div>
+            <div>
+              <strong>elle / est</strong>
+              <span>[[conjugation.imperfect.2]]</span>
+            </div>
+            <div>
+              <strong>nous</strong>
+              <span>[[conjugation.imperfect.3]]</span>
+            </div>
+            <div>
+              <strong>vous</strong>
+              <span>[[conjugation.imperfect.4]]</span>
+            </div>
+            <div>
+              <strong>elles / ils</strong>
+              <span>[[conjugation.imperfect.5]]</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div>
+            <h3>Simple Past</h3>
+          </div>
+          <div>
+            <div>
+              <strong>je</strong>
+              <span>[[ conjugation.simplePast.0 ]]</span>
+            </div>
+            <div>
+              <strong>tu</strong>
+              <span>[[conjugation.simplePast.1]]</span>
+            </div>
+            <div>
+              <strong>elle / est</strong>
+              <span>[[conjugation.simplePast.2]]</span>
+            </div>
+            <div>
+              <strong>nous</strong>
+              <span>[[conjugation.simplePast.3]]</span>
+            </div>
+            <div>
+              <strong>vous</strong>
+              <span>[[conjugation.simplePast.4]]</span>
+            </div>
+            <div>
+              <strong>elles / ils</strong>
+              <span>[[conjugation.simplePast.5]]</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div>
+            <h3>Present Subjunctive</h3>
+          </div>
+          <div>
+            <div>
+              <strong>je</strong>
+              <span>[[ conjugation.simplePast.0 ]]</span>
+            </div>
+            <div>
+              <strong>tu</strong>
+              <span>[[conjugation.simplePast.1]]</span>
+            </div>
+            <div>
+              <strong>elle / est</strong>
+              <span>[[conjugation.simplePast.2]]</span>
+            </div>
+            <div>
+              <strong>nous</strong>
+              <span>[[conjugation.simplePast.3]]</span>
+            </div>
+            <div>
+              <strong>vous</strong>
+              <span>[[conjugation.simplePast.4]]</span>
+            </div>
+            <div>
+              <strong>elles / ils</strong>
+              <span>[[conjugation.simplePast.5]]</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script>
+    Polymer({
+      is: 'french-conjugation-table',
+      properties: {
+        conjugation: {
+          type: Object,
+          observer: 'conjugationChanged',
+          value: null
+        },
+        text: {
+          type: String
+        }
+      },
+      conjugationChanged: function(newValue, oldValue) {
+        if (typeof newValue === 'object' && newValue !== null) {
+        }
+      }
+    });
+  </script>
+</dom-module>
